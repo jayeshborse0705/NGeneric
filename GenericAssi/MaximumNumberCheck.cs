@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace GenericAssi
 {
-    internal class MaximumNumberCheck
+    public class GenericMaximum<T> where T : IComparable
     {
+        public T firstvalue, secondvalue, thirdvalue;
+
+        public GenericMaximum(T firstvalue, T secondvalue, T thirdvalue, T[] value)
+        {
+            this.firstvalue=firstvalue;
+            this.secondvalue=secondvalue;
+            this.thirdvalue=thirdvalue;
+            this.value=value;
+        }
         public static int MaximumIntegerNumber(int firstvalue, int secondvalue, int thirdvalue)
         {
             if (firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) >0 ||
